@@ -5,7 +5,6 @@
  * 
  * ???      * https://forum.hardware.fr/hfr/Programmation/C-2/fmod-probleme-getspectrum-sujet_91099_1.htm
 
- * play_stream.cpp -> /home/magusti/docencia/2k18-2k19/docenciaEnXarxa/FMOD_instalacio/FMOD/fmodstudioapi20000linux/api/core/examples/
  
   * documentació FMOD --> 10.1.9 FFT https://www.fmod.com/docs/2.02/api/effects-reference.html#fft
    --> https://www.fmod.com/docs/2.02/api/core-api-common-dsp-effects.html#fmod_dsp_fft
@@ -30,16 +29,6 @@ g++ -pthread  -m64 -O2 -o play_stream__fft_FMOD play_stream__fft_FMOD.cpp FMOD_i
 
 g++ -pthread  -m64 -O2 -o play_stream__fft_FMOD play_stream__fft_FMOD.cpp FMOD_v2.02.11/fmodstudioapi20211linux/api/core/examples/common.cpp FMOD_v2.02.11/fmodstudioapi20211linux/api/core/examples/common_platform.cpp  FMOD_v2.02.11/fmodstudioapi20211linux/api/core/lib/x86_64/libfmod.so   -IFMOD_v2.02.11/fmodstudioapi20211linux/api/core/inc/  -FMOD_v2.02.11/fmodstudioapi20211linux/api/core/examples/ -LFMOD_v2.02.11/fmodstudioapi20211linux/api/core/lib/x86_64/ -lfmod
 
-magusti@verdet:~/docencia/2k22-2k23/docenciaEnXarxa/articles/pintarEspectreDeFreqs_FMOD_OpenGL$ play_stream__fft_FMOD
-play_stream__fft_FMOD: error while loading shared libraries: libfmod.so.11: cannot open shared object file: No such file or directory
-
-
-The reason behind this error is that the libraries of the program have been installed in a place where dynamic linker cannot find it.
-
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/magusti/docencia/2k22-2k23/docenciaEnXarxa/articles/pintarEspectreDeFreqs_FMOD_OpenGL/FMOD_instalacio__articleDocentAnterior/FMOD//fmodstudioapi20000linux/api/core/lib/x86_64/ play_stream__fft_FMOD stero.ogg
-
-
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/magusti/docencia/2k22-2k23/docenciaEnXarxa/articles/pintarEspectreDeFreqs_FMOD_OpenGL/FMOD_instalacio__articleDocentAnterior/FMOD//fmodstudioapi20000linux/api/core/lib/x86_64/ play_stream__fft_FMOD ./FMOD_v2.02.11/fmodstudioapi20211linux/api/core/examples/media/stereo.ogg
 ==============================================================================*/
 #include "fmod.hpp"
 #include "common.h"
