@@ -1,1 +1,1 @@
-../../articles/FMOD_FFT__calcularEspectreDeFreqs_FMOD_OpenGL/play_stream__fft_FMOD.cpp
+/home/magusti/docencia/2k23-2k24/docenciaEnXarxa/articles/FMOD_FFT__pintarEspectreDeFreqs_FMOD_OpenGL/FMOD_FFT__calcularEspectreDeFreqs_FMOD_OpenGL/play_stream__fft_FMOD.cpp
